@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="./quizz.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <!--layer one-->
+    <div class="sec-one">
+      <div class="big-text">
+        <div class="baris">
+          <span class="text-gsap down">WELCOME</span>
+        </div>
+        <div class="baris">
+          <span class="text-gsap up">TO</span>
+          <span class="text-gsap down">MY</span>
+          <span class="text-gsap up">WEBSITE</span>
+        </div>
+        <div class="baris">
+          <span class="text-gsap down">QUIZZ</span>
+          <span class="text-gsap up">SIGMA</span>
+          <span class="text-gsap down">PEOPLE</span>
+        </div>
+      </div>
+      <div class="small-text opacity">
+        <div class="texts-gsap">
+         <p>
+          dengan quiz ini anda dapat mengetahui seberapa kuat pengalaman anda dalam hidup, untuk mendapatkan jawaban yang mungkin kalian cari di masa remaja, quiz ini hadir dengan rasa vanilla dengan taburan pahitnya hidup, matematika , dan pengetahuan pemrogaman anda  ya pokoknya gitu lah
+         </p>
+         <div class="start-btn btnn"><button>Start Quiz</button></div>
+        </div>
+      </div>
+
+      <!--music box-->
+    <div class="music-box" onclick="togglePlayPause()">
+      <i class="fa-solid fa-chevron-up chev"></i>
+      <div class="music">
+        <i class="fa-solid fa-music aaa"></i>
+        <audio id="myAudio">
+          <source src="./WhatsApp Audio 2024-01-14 at 12.46.32_d02b27bf.dat" type="audio/mp3">
+      </audio>
+      </div>
+     
+    </div>
+  
+     
+    </div>
+
+    
+    <!-- Info Box -->
+    
+    <div class="info-box">
+        <div class="ingfo">
+          <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. anda hanya punya waktu <span>15 detik</span> per soal ya.</div>
+            <div class="info">2. jangan google masa gini doang google!.</div>
+            <div class="info">3. soal berjumlah 15 aja.</div>
+            <div class="info">4. soal bertema mtk, pemrogaman, dan politik.</div>
+            <div class="info">5. kalau bisa buat  kayak gini juga.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    
+    <div class="quiz-box">
+        <header>
+            <div class="title">Awesome Quiz</div>
+            <div class="timer">
+                <div class="time-left-txt">Time Left</div>
+                <div class="timer-sec">15</div>
+            </div>
+            <div class="time-line"></div>
+        </header>
+
+        
+        <section>
+            <div class="que-text">
+               
+            </div>
+            <div class="option-list">
+              
+          </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+          <div class="total-que">
+               
+          </div>
+          <button class="next-btn">NEXT</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result-box">
+        <div class="ingfo-result">
+          <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete-text">You've completed the Quiz!</div>
+        <div class="score-text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+        </div>
+    </div>
+</body>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  const alamak = gsap.timeline();
+
+  alamak.from('.down' , {
+    stagger:0.3,
+    opacity:0,
+    y:100
+  })
+  alamak.from('.up' , {
+    stagger:0.3,
+    opacity:0,
+    y:-100
+  })
+  alamak.from('.opacity' , {
+    stagger:0.3,
+    opacity:0,
+    xPercent:-100
+  })
+  alamak.from('.btnn',1 , {
+    
+    opacity:0,
+    
+  })
+</script>
+<script src="./quiz2.js"></script>
+<script src="./quizzz.js"></script>
+
+
+</html>
